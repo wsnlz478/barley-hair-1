@@ -3487,17 +3487,18 @@ footer {
 }
 
 .copy-tooltip {
-    position: absolute;
+    position: fixed !important;
     background: var(--gradient-primary);
     color: white;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 6px;
     font-size: 14px;
     font-weight: 600;
     pointer-events: none;
-    z-index: 10000;
+    z-index: 999999 !important;
     animation: tooltipFadeIn 0.2s ease-out;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    white-space: nowrap;
 }
 
 .copy-tooltip::after {
