@@ -142,9 +142,6 @@ const smoothScrolling = () => {
     });
 };
 
-// Run initialization when DOM is loaded
-document.addEventListener('DOMContentLoaded', init);
-
 // Add CSS for burger toggle animation
 const style = document.createElement('style');
 style.textContent = `
@@ -453,3 +450,6 @@ function init() {
     initCasesFilter();
     initCopyToClipboard();
 };
+
+// Run initialization when DOM is loaded
+document.addEventListener('DOMContentLoaded', init);
