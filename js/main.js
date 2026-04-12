@@ -403,34 +403,76 @@ const initCopyToClipboard = () => {
     
     contactMethods.forEach(method => {
         method.style.position = 'relative';
+        method.style.cursor = 'pointer';
         
         method.addEventListener('click', async function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
             const contentElement = this.querySelector('.contact-method-content p, .contact-method-content-bottom p');
             if (!contentElement) return;
             
             const textToCopy = contentElement.textContent.trim();
             
-            try {
-                await navigator.clipboard.writeText(textToCopy);
+            const showTooltip = () => {
+                // Remove any existing tooltips first
+                const existingTooltips = document.querySelectorAll('.copy-tooltip');
+                existingTooltips.forEach(tip => tip.remove());
                 
                 const tooltip = document.createElement('div');
                 tooltip.className = 'copy-tooltip';
                 tooltip.textContent = 'Copied!';
                 
                 const rect = this.getBoundingClientRect();
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 
-                tooltip.style.top = (rect.top + scrollTop - 45) + 'px';
+                // Use fixed positioning for tooltip
+                tooltip.style.top = (rect.top - 50) + 'px';
                 tooltip.style.left = (rect.left + rect.width / 2) + 'px';
                 tooltip.style.transform = 'translateX(-50%)';
                 
                 document.body.appendChild(tooltip);
                 
                 setTimeout(() => {
-                    tooltip.remove();
+                    if (tooltip.parentNode) {
+                        tooltip.remove();
+                    }
                 }, 2000);
-            } catch (err) {
-                console.error('Failed to copy:', err);
+            };
+            
+            // Try modern clipboard API first
+            if (navigator.clipboard && window.isSecureContext) {
+                try {
+                    await navigator.clipboard.writeText(textToCopy);
+                    showTooltip();
+                    return;
+                } catch (err) {
+                    console.log('Modern clipboard failed, trying fallback:', err);
+                }
+            }
+            
+            // Fallback: use old execCommand method
+            try {
+                const textArea = document.createElement('textarea');
+                textArea.value = textToCopy;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-9999px';
+                textArea.style.top = '-9999px';
+                textArea.style.opacity = '0';
+                textArea.readOnly = true;
+                document.body.appendChild(textArea);
+                textArea.select();
+                textArea.setSelectionRange(0, 999999);
+                
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (successful) {
+                    showTooltip();
+                }
+            } catch (fallbackErr) {
+                console.error('All copy methods failed:', fallbackErr);
+                // Last resort: alert the text
+                alert('Copy this: ' + textToCopy);
             }
         });
     });
