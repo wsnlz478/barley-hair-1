@@ -462,31 +462,22 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script src="https://www.zhifazhifa.com/sendemail/form.js"></script>
-    <script>
+    <!-- 所有开关全外置，英文秒生效，无冲突 -->
+<script>
 window.ZfFormConfig = {
-    // ========== 核心总开关 ==========
-    enable: true,                 // 表单总开关：true开启 / false关闭
-    enableShrink: true,           // PC半圆收起特效开关
-    language: "en",                // 语言：zh中文 / en英文
-
-    // ========== 样式布局开关 ==========
-    pcMode: "float",               // PC端：float悬浮 / static固定
-    mobileMode: "mini",            // 移动端：mini迷你按钮 / full全屏底部
-
-    // ========== 内容显示开关 ==========
-    showQrcode: false,             // 显示二维码
-    showWechat: true,              // 显示微信号复制栏
-
-    // ========== 联系方式配置 ==========
-    wechat: "15810155700",        // 微信号
-    qrcode: "/images/erweima.jpg", // 二维码图片地址
-
-    // ========== 尺寸样式自定义（可选） ==========
-    pcWidth: 340,                  // PC表单宽度
-    halfWidth: 60,                  // 半圆宽度
-    halfHeight: 120                 // 半圆高度
+    enable: true,
+    enableShrink: true,
+    language: "en",          // en 英文 / zh 中文 【立即生效】
+    pcMode: "float",
+    mobileMode: "full",      // full 全屏 / mini 迷你 【与微信栏无冲突】
+    showQrcode: false,
+    showWechat: true,        // 移动端完美适配，不挤压
+    wechat: "15810155700",
+    qrcode: "/images/erweima.jpg"
 };
 </script>
+<!-- 强制清缓存，必加 -->
+<script src="form.js?v=final2026"></script>
 
 </body>
 </html>
