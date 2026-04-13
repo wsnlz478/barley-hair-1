@@ -3671,3 +3671,11 @@ footer {
 .cta-section {
     padding: 100px 0;
 }
+
+
+/* 移动端隐藏置顶按钮 */
+@media screen and (max-width: 768px) {
+    .scroll-top {
+        display: none !important;
+    }
+}
