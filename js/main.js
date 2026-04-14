@@ -176,26 +176,26 @@ const renderRandomResults = () => {
     if (!resultsGrid) return;
     
     const allCasesData = [
-        { type: 'man-fa', image: 'images/man-fa-001.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
-        { type: 'man-fa', image: 'images/man-fa-002.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
-        { type: 'man-fa', image: 'images/man-fa-003.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
-        { type: 'man-fa', image: 'images/man-fa-004.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
-        { type: 'man-fa', image: 'images/man-fa-005.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
-        { type: 'man-tu', image: 'images/man-tu-001.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
-        { type: 'man-tu', image: 'images/man-tu-002.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
-        { type: 'man-tu', image: 'images/man-tu-003.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
-        { type: 'man-tu', image: 'images/man-tu-004.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
-        { type: 'man-tu', image: 'images/man-tu-005.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
-        { type: 'nv-fa', image: 'images/nv-fa-001.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
-        { type: 'nv-fa', image: 'images/nv-fa-002.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
-        { type: 'nv-fa', image: 'images/nv-fa-003.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
-        { type: 'nv-fa', image: 'images/nv-fa-004.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
-        { type: 'nv-fa', image: 'images/nv-fa-005.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
-        { type: 'man-hu', image: 'images/man-hu-001.jpg', label: 'BEARD', title: 'Beard Transplant' },
-        { type: 'man-hu', image: 'images/man-hu-002.jpg', label: 'BEARD', title: 'Beard Transplant' },
-        { type: 'man-hu', image: 'images/man-hu-003.jpg', label: 'BEARD', title: 'Beard Transplant' },
-        { type: 'nv-mei', image: 'images/nv-mei-001.jpg', label: 'EYEBROW', title: 'Eyebrow Transplant' },
-        { type: 'nv-mei', image: 'images/nv-mei-002.jpg', label: 'EYEBROW', title: 'Eyebrow Transplant' }
+        { type: 'man-fa', image: '/images/man-fa-001.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
+        { type: 'man-fa', image: '/images/man-fa-002.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
+        { type: 'man-fa', image: '/images/man-fa-003.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
+        { type: 'man-fa', image: '/images/man-fa-004.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
+        { type: 'man-fa', image: '/images/man-fa-005.jpg', label: 'MEN HAIRLINE', title: 'Men’s Hairline Restoration' },
+        { type: 'man-tu', image: '/images/man-tu-001.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
+        { type: 'man-tu', image: '/images/man-tu-002.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
+        { type: 'man-tu', image: '/images/man-tu-003.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
+        { type: 'man-tu', image: '/images/man-tu-004.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
+        { type: 'man-tu', image: '/images/man-tu-005.jpg', label: 'MEN CROWN', title: 'Men’s Baldness Hair Transplant' },
+        { type: 'nv-fa', image: '/images/nv-fa-001.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
+        { type: 'nv-fa', image: '/images/nv-fa-002.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
+        { type: 'nv-fa', image: '/images/nv-fa-003.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
+        { type: 'nv-fa', image: '/images/nv-fa-004.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
+        { type: 'nv-fa', image: '/images/nv-fa-005.jpg', label: 'WOMEN HAIRLINE', title: 'Women’s Hairline Transplant' },
+        { type: 'man-hu', image: '/images/man-hu-001.jpg', label: 'BEARD', title: 'Beard Transplant' },
+        { type: 'man-hu', image: '/images/man-hu-002.jpg', label: 'BEARD', title: 'Beard Transplant' },
+        { type: 'man-hu', image: '/images/man-hu-003.jpg', label: 'BEARD', title: 'Beard Transplant' },
+        { type: 'nv-mei', image: '/images/nv-mei-001.jpg', label: 'EYEBROW', title: 'Eyebrow Transplant' },
+        { type: 'nv-mei', image: '/images/nv-mei-002.jpg', label: 'EYEBROW', title: 'Eyebrow Transplant' }
     ];
     
     function shuffleArray(array) {
@@ -226,26 +226,26 @@ const renderRandomResults = () => {
 // Cases filter and rendering
 const initCasesFilter = () => {
     const cases = [
-        { id: 1, image: 'images/man-fa-001.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
-        { id: 2, image: 'images/man-fa-002.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
-        { id: 3, image: 'images/man-fa-003.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
-        { id: 4, image: 'images/man-fa-004.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
-        { id: 5, image: 'images/man-fa-005.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
-        { id: 6, image: 'images/man-tu-001.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
-        { id: 7, image: 'images/man-tu-002.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
-        { id: 8, image: 'images/man-tu-003.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
-        { id: 9, image: 'images/man-tu-004.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
-        { id: 10, image: 'images/man-tu-005.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
-        { id: 11, image: 'images/nv-fa-001.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
-        { id: 12, image: 'images/nv-fa-002.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
-        { id: 13, image: 'images/nv-fa-003.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
-        { id: 14, image: 'images/nv-fa-004.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
-        { id: 15, image: 'images/nv-fa-005.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
-        { id: 16, image: 'images/man-hu-001.jpg', title: 'Beard Transplant', category: 'man-hu', label: 'BEARD' },
-        { id: 17, image: 'images/man-hu-002.jpg', title: 'Beard Transplant', category: 'man-hu', label: 'BEARD' },
-        { id: 18, image: 'images/man-hu-003.jpg', title: 'Beard Transplant', category: 'man-hu', label: 'BEARD' },
-        { id: 19, image: 'images/nv-mei-001.jpg', title: 'Eyebrow Transplant', category: 'nv-mei', label: 'EYEBROW' },
-        { id: 20, image: 'images/nv-mei-002.jpg', title: 'Eyebrow Transplant', category: 'nv-mei', label: 'EYEBROW' }
+        { id: 1, image: '/images/man-fa-001.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
+        { id: 2, image: '/images/man-fa-002.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
+        { id: 3, image: '/images/man-fa-003.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
+        { id: 4, image: '/images/man-fa-004.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
+        { id: 5, image: '/images/man-fa-005.jpg', title: 'Men’s Hairline Restoration', category: 'man-fa', label: 'MEN HAIRLINE' },
+        { id: 6, image: '/images/man-tu-001.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
+        { id: 7, image: '/images/man-tu-002.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
+        { id: 8, image: '/images/man-tu-003.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
+        { id: 9, image: '/images/man-tu-004.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
+        { id: 10, image: '/images/man-tu-005.jpg', title: 'Men’s Baldness Hair Transplant', category: 'man-tu', label: 'MEN CROWN' },
+        { id: 11, image: '/images/nv-fa-001.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
+        { id: 12, image: '/images/nv-fa-002.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
+        { id: 13, image: '/images/nv-fa-003.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
+        { id: 14, image: '/images/nv-fa-004.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
+        { id: 15, image: '/images/nv-fa-005.jpg', title: 'Women’s Hairline Transplant', category: 'nv-fa', label: 'WOMEN HAIRLINE' },
+        { id: 16, image: '/images/man-hu-001.jpg', title: 'Beard Transplant', category: 'man-hu', label: 'BEARD' },
+        { id: 17, image: '/images/man-hu-002.jpg', title: 'Beard Transplant', category: 'man-hu', label: 'BEARD' },
+        { id: 18, image: '/images/man-hu-003.jpg', title: 'Beard Transplant', category: 'man-hu', label: 'BEARD' },
+        { id: 19, image: '/images/nv-mei-001.jpg', title: 'Eyebrow Transplant', category: 'nv-mei', label: 'EYEBROW' },
+        { id: 20, image: '/images/nv-mei-002.jpg', title: 'Eyebrow Transplant', category: 'nv-mei', label: 'EYEBROW' }
     ];
     
     const casesGrid = document.getElementById('casesGrid');
@@ -389,7 +389,7 @@ const renderHospitalEnvironment = () => {
     
     hospitalEnvGrid.innerHTML = randomNumbers.map((num, index) => `
         <div class="hospital-environment-card fade-in">
-            <img src="images/fenyuan-${num}.jpg" alt="${randomSceneNames[index]}" class="hospital-environment-image" loading="lazy">
+            <img src="/images/fenyuan-${num}.jpg" alt="${randomSceneNames[index]}" class="hospital-environment-image" loading="lazy">
             <div class="hospital-environment-content">
                 <h4>${randomSceneNames[index]}</h4>
             </div>
