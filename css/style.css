@@ -549,6 +549,13 @@ nav {
     transform: translateY(-2px);
 }
 
+/* 移动端隐藏快速链接导航 */
+@media screen and (max-width: 768px) {
+    .quick-links-footer {
+        display: none;
+    }
+}
+
 /* Footer */
 footer {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
