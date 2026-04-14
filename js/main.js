@@ -333,7 +333,7 @@ const renderDoctorPatientPhotos = () => {
     
     doctorPatientGrid.innerHTML = randomNumbers.map((num, index) => `
         <div class="doctor-patient-card fade-in">
-            <img src="images/heying-${num}.jpg" alt="${randomPhotoNames[index]}" class="doctor-patient-image" loading="lazy">
+            <img src="/images/heying-${num}.jpg" alt="${randomPhotoNames[index]}" class="doctor-patient-image" loading="lazy">
             <div class="doctor-patient-content">
                 <h4>${randomPhotoNames[index]}</h4>
             </div>
